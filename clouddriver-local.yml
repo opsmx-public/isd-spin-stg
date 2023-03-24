@@ -61,3 +61,23 @@ kubernetes:
     cachingPolicies: []
     onlySpinnakerManaged: true
     checkPermissionsOnStartup: false
+  - name: "staging-account"
+    liveManifestCalls: true
+    requiredGroupMembership: []
+    providerVersion: "v2"
+    permissions: {}
+    dockerRegistries: []
+    kubeconfigFile: "configserver:kubeCfg_staging-account"
+    configureImagePullSecrets: true
+    serviceAccount: false
+    cacheThreads: 1
+    namespaces:
+    - "deploy-staging"
+    omitNamespaces: []
+    kinds: []
+    omitKinds:
+    - "podPreset"
+    customResources: []
+    cachingPolicies: []
+    onlySpinnakerManaged: true
+    checkPermissionsOnStartup: false
