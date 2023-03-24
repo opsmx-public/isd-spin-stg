@@ -394,7 +394,9 @@ deploymentConfigurations:
     enabled: false
   notifications:
     slack:
-      enabled: false
+      enabled: true
+      botName: "spinnaker"
+      token: "xoxb-66145638228-3149319683157-n6Nes2HRchsEUO3CtWoPwkrA"
     twilio:
       enabled: false
       baseUrl: "https://api.twilio.com/"
