@@ -113,7 +113,7 @@ deploymentConfigurations:
       enabled: false
     vault:
       enabled: false
-    location: SPINNAKER_NAMESPACE
+    location: "SPINNAKER_NAMESPACE"
     customSizing:
       front50:
         requests:
@@ -173,170 +173,121 @@ deploymentConfigurations:
           cpu: "500m"
       monitoring-daemon:
         requests:
-          memory: 70Mi
-          cpu: 100m
+          memory: "70Mi"
+          cpu: "100m"
     sidecars: {}
-#    sidecars:
-#      spin-clouddriver-caching:
-#      - name: k8s-config-sync
-#        dockerImage: quay.io/konikris/k8s-decoder:git-k8s
-#        command: ["sh", "-c"]
-#        args: ["while true; do sh /tmp/script/k8config-sync.sh; sleep 60s; done"]
-#        configMapVolumeMounts:
-#        - configMapName: k8config-sync
-#          mountPath: /tmp/script
-#        mountPath: /opsmx
-#        secretVolumeMounts:
-#          - secretName: opsmx-gitops-auth
-#            mountPath: /tmp/secret
-#      spin-clouddriver-ro:
-#      - name: k8s-config-sync
-#        dockerImage: quay.io/konikris/k8s-decoder:git-k8s
-#        command: ["sh", "-c"]
-#        args: ["while true; do sh /tmp/script/k8config-sync.sh; sleep 60s; done"]
-#        configMapVolumeMounts:
-#        - configMapName: k8config-sync
-#          mountPath: /tmp/script
-#        mountPath: /opsmx
-#        secretVolumeMounts:
-#          - secretName: opsmx-gitops-auth
-#            mountPath: /tmp/secret 
-#      spin-clouddriver-ro-deck:
-#      - name: k8s-config-sync
-#        dockerImage: quay.io/konikris/k8s-decoder:git-k8s
-#        command: ["sh", "-c"]
-#        args: ["while true; do sh /tmp/script/k8config-sync.sh; sleep 60s; done"]
-#        configMapVolumeMounts:
-#        - configMapName: k8config-sync
-#          mountPath: /tmp/script
-#        mountPath: /opsmx
-#        secretVolumeMounts:
-#          - secretName: opsmx-gitops-auth
-#            mountPath: /tmp/secret
-#      spin-clouddriver-rw:
-#      - name: k8s-config-sync
-#        dockerImage: quay.io/konikris/k8s-decoder:git-k8s
-#        command: ["sh", "-c"]
-#        args: ["while true; do sh /tmp/script/k8config-sync.sh; sleep 60s; done"]
-#        configMapVolumeMounts:
-#        - configMapName: k8config-sync
-#          mountPath: /tmp/script
-#        mountPath: /opsmx
-#        secretVolumeMounts:
-#          - secretName: opsmx-gitops-auth
-#            mountPath: /tmp/secret
     initContainers: {}
     hostAliases: {}
-    affinity: 
+    affinity:
       spin-igor:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'
+                - "ISD-SPIN-STAGING"
       spin-rosco:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'
+                - "ISD-SPIN-STAGING"
       spin-orca:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'
+                - "ISD-SPIN-STAGING"
       spin-front50:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'
+                - "ISD-SPIN-STAGING"
       spin-fiat:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-echo-worker:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-echo-scheduler:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-deck:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-clouddriver-rw:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-clouddriver-ro-deck:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-clouddriver-ro:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'                                                          
+                - "ISD-SPIN-STAGING"
       spin-clouddriver-caching:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: isdenv
-                operator: In
+              - key: "isdenv"
+                operator: "In"
                 values:
-                - 'ISD-SPIN-STAGING'
-    tolerations: 
+                - "ISD-SPIN-STAGING"
+    tolerations:
       spin-igor:
       - key: "isdenv"
         operator: "Equal"
@@ -353,11 +304,6 @@ deploymentConfigurations:
         value: "ISD-SPIN-STAGING"
         effect: "NoSchedule"
       spin-front50:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-fiat:
       - key: "isdenv"
         operator: "Equal"
         value: "ISD-SPIN-STAGING"
@@ -457,8 +403,14 @@ deploymentConfigurations:
   timezone: "America/Los_Angeles"
   ci:
     jenkins:
-      enabled: false
-      masters: []
+      enabled: true
+      masters:
+      - name: "jenkins"
+        permissions: {}
+        address: "https://jenkins.opsmx.net:8181/jenkins"
+        username: "opsmxdev"
+        password: "1137202a2b83de7e15669402fea7a30e14"
+        csrf: true
     travis:
       enabled: false
       masters: []
@@ -482,11 +434,11 @@ deploymentConfigurations:
     apiSecurity:
       ssl:
         enabled: false
-      overrideBaseUrl: /gate/
+      overrideBaseUrl: "/gate/"
     uiSecurity:
       ssl:
         enabled: false
-      overrideBaseUrl: PROTOCOL://OVERRIDE_DECK_URL
+      overrideBaseUrl: "PROTOCOL://OVERRIDE_DECK_URL"
     authn:
       oauth2:
         enabled: false
@@ -529,21 +481,21 @@ deploymentConfigurations:
       accounts: []
     github:
       enabled: true
-      accounts: 
-      - name: opsmxdemo_account
+      accounts:
+      - name: "opsmxdemo_account"
     gitlab:
       enabled: false
       accounts: []
     gitrepo:
-      enabled: true 
-      accounts: 
-      - name: opsmx_repo
+      enabled: true
+      accounts:
+      - name: "opsmx_repo"
     http:
       enabled: false
       accounts: []
     helm:
-      enabled: true 
-      accounts: 
+      enabled: true
+      accounts:
       - name: "opsmx-oes-helm-repo"
         repository: "https://helmcharts.opsmx.com"
     s3:
