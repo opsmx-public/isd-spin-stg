@@ -178,176 +178,176 @@ deploymentConfigurations:
     sidecars: {}
     initContainers: {}
     hostAliases: {}
-    affinity:
-      spin-igor:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-rosco:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-orca:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-front50:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-fiat:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-echo-worker:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-echo-scheduler:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-deck:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-clouddriver-rw:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-clouddriver-ro-deck:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-clouddriver-ro:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-      spin-clouddriver-caching:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "isdenv"
-                operator: "In"
-                values:
-                - "ISD-SPIN-STAGING"
-    tolerations:
-      spin-igor:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-rosco:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-orca:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-front50:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-echo-worker:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-echo-scheduler:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-fiat:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-deck:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-clouddriver-rw:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-clouddriver-ro:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-clouddriver-ro-deck:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
-      spin-clouddriver-caching:
-      - key: "isdenv"
-        operator: "Equal"
-        value: "ISD-SPIN-STAGING"
-        effect: "NoSchedule"
+    #affinity:
+    #  spin-igor:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-rosco:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-orca:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-front50:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-fiat:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-echo-worker:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-echo-scheduler:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-deck:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-clouddriver-rw:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-clouddriver-ro-deck:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-clouddriver-ro:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #  spin-clouddriver-caching:
+    #    nodeAffinity:
+    #      requiredDuringSchedulingIgnoredDuringExecution:
+    #        nodeSelectorTerms:
+    #        - matchExpressions:
+    #          - key: "isdenv"
+    #            operator: "In"
+    #            values:
+    #            - "ISD-SPIN-STAGING"
+    #tolerations:
+    #  spin-igor:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-rosco:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-orca:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-front50:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-echo-worker:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-echo-scheduler:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-fiat:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-deck:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-clouddriver-rw:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-clouddriver-ro:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-clouddriver-ro-deck:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
+    #  spin-clouddriver-caching:
+    #  - key: "isdenv"
+    #    operator: "Equal"
+    #    value: "ISD-SPIN-STAGING"
+    #    effect: "NoSchedule"
     nodeSelectors: {}
     gitConfig:
       upstreamUser: "spinnaker"
