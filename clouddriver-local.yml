@@ -114,6 +114,8 @@ kubernetes:
     namespaces: []
     omitNamespaces:
     - "opsmx-isd"
+    - "cert-manager"
+    - "default"
     kinds: []
     omitKinds:
     - "podPreset"
