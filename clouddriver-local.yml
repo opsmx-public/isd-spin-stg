@@ -111,9 +111,9 @@ kubernetes:
     configureImagePullSecrets: true
     serviceAccount: false
     cacheThreads: 1
-    namespaces:
+    namespaces: []
+    omitNamespaces:
     - "opsmx-isd"
-    omitNamespaces: []
     kinds: []
     omitKinds:
     - "podPreset"
