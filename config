@@ -27,8 +27,11 @@ deploymentConfigurations:
       defaults:
         iamRole: "BaseIAMRole"
     ecs:
-      enabled: false
-      accounts: []
+      enabled: true
+      accounts:
+      - name: "ecs-cloud"
+        permissions: {}
+        awsAccount: "aws-cloud"
     azure:
       enabled: false
       accounts: []
