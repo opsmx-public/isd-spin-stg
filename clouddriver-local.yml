@@ -101,3 +101,23 @@ kubernetes:
     cachingPolicies: []
     onlySpinnakerManaged: true
     checkPermissionsOnStartup: false
+  - name: "akhil-cloud"
+    liveManifestCalls: true
+    requiredGroupMembership: []
+    providerVersion: "v2"
+    permissions: {}
+    dockerRegistries: []
+    kubeconfigFile: "configserver:kubeCfg_akhil-cloud"
+    configureImagePullSecrets: true
+    serviceAccount: false
+    cacheThreads: 1
+    namespaces:
+    - "opsmx-isd"
+    omitNamespaces: []
+    kinds: []
+    omitKinds:
+    - "podPreset"
+    customResources: []
+    cachingPolicies: []
+    onlySpinnakerManaged: true
+    checkPermissionsOnStartup: false
