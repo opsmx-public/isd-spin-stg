@@ -1,5 +1,7 @@
 spinnaker:
   build:
+  locking:
+    enabled: true
     pollInterval: 60  # in seconds for all monitors
     pollingSafeguard:
        itemUpperThreshold: 10000
