@@ -27,11 +27,7 @@ deploymentConfigurations:
       defaults:
         iamRole: "BaseIAMRole"
     ecs:
-      enabled: true
-      accounts:
-      - name: "ecs-cloud"
-        permissions: {}
-        awsAccount: "aws-cloud"
+      enabled: false
     azure:
       enabled: false
       accounts: []
@@ -266,11 +262,7 @@ deploymentConfigurations:
       enabled: false
       masters: []
     gcb:
-      enabled: true
-      accounts:
-      - name: "gcb-3"
-        project: "sandbox-spin"
-        subscriptionName: "cloud-build-sub"
+      enabled: false
     codebuild:
       enabled: false
       accounts: []
