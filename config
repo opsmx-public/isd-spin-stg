@@ -18,6 +18,15 @@ deploymentConfigurations:
         lifecycleHooks: []
         regions:
         - name: "us-west-1"
+      - name: "awscloud-1"
+        requiredGroupMembership: []
+        providerVersion: "v1"
+        permissions: {}
+        accountId: "732813442182"
+        assumeRole: "spinEC2Managed"
+        lifecycleHooks: []
+        regions:
+        - name: "us-west-1"
       bakeryDefaults:
         baseImages: []
       defaultKeyPairTemplate: "{{name}}-keypair"
