@@ -277,8 +277,16 @@ deploymentConfigurations:
       accounts: []
   repository:
     artifactory:
-      enabled: false
-      searches: []
+      enabled: true
+      searches:
+      - name: "admin"
+        permissions: {}
+        baseUrl: "https://opsmx.jfrog.io"
+        repo: "opsmx-helm-local"
+        groupId: "1.0.1"
+        repoType: "helm"
+        username: "harsha"
+        password: "Harsha@123"
   security:
     apiSecurity:
       ssl:
