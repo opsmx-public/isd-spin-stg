@@ -67,6 +67,19 @@ deploymentConfigurations:
         - "library/ubuntu"
         - "library/centos"
         - "library/nginx"
+      - name: "gcr-apr"
+        requiredGroupMembership: []
+        permissions: {}
+        address: "https://gcr.io"
+        email: "fake.email@spinnaker.io"
+        cacheIntervalSeconds: 30
+        clientTimeoutMillis: 60000
+        cacheThreads: 1
+        paginateSize: 100
+        sortTagsByDate: false
+        trackDigests: false
+        insecureRegistry: false
+        repositories: []
       primaryAccount: "dockerhub"
     google:
       enabled: false
