@@ -291,6 +291,7 @@ deploymentConfigurations:
       masters: []
     gcb:
       enabled: false
+      accounts: []
     codebuild:
       enabled: false
       accounts: []
