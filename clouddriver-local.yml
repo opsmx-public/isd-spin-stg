@@ -143,3 +143,23 @@ kubernetes:
     cachingPolicies: []
     onlySpinnakerManaged: true
     checkPermissionsOnStartup: false
+  - name: "k8s-config"
+    liveManifestCalls: true
+    requiredGroupMembership: []
+    providerVersion: "v2"
+    permissions: {}
+    dockerRegistries: []
+    kubeconfigFile: "configserver:kubeCfg_k8s-config"
+    configureImagePullSecrets: true
+    serviceAccount: false
+    cacheThreads: 1
+    namespaces:
+    - "stg"
+    omitNamespaces: []
+    kinds: []
+    omitKinds:
+    - "podPreset"
+    customResources: []
+    cachingPolicies: []
+    onlySpinnakerManaged: true
+    checkPermissionsOnStartup: false
