@@ -295,6 +295,9 @@ deploymentConfigurations:
       - name: "gcbapr13"
         project: "sandbox-spin"
         subscriptionName: "cloud-build-sub"
+      - name: "gcbtest13"
+        project: "sandbox-spin"
+        subscriptionName: "cloud-build-sub"
     codebuild:
       enabled: false
       accounts: []
