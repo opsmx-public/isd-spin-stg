@@ -261,6 +261,12 @@ deploymentConfigurations:
         username: "opsmxdev"
         password: "1137202a2b83de7e15669402fea7a30e14"
         csrf: true
+      - name: "jenkins-test"
+        permissions: {}
+        address: "https://jenkins.opsmx.net:8181/jenkins"
+        username: "opsmxdev"
+        password: "1137202a2b83de7e15669402fea7a30e14"
+        csrf: true
     travis:
       enabled: false
       masters: []
