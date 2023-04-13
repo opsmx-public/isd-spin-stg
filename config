@@ -290,7 +290,7 @@ deploymentConfigurations:
       enabled: false
       masters: []
     gcb:
-      enabled: true
+      enabled: false
       accounts: []
     codebuild:
       enabled: false
