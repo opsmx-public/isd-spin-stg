@@ -290,8 +290,11 @@ deploymentConfigurations:
       enabled: false
       masters: []
     gcb:
-      enabled: false
-      accounts: []
+      enabled: true
+      accounts:
+      - name: "gcb"
+        project: "sandbox-spin"
+        subscriptionName: "cloud-build-sub"
     codebuild:
       enabled: false
       accounts: []
