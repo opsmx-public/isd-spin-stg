@@ -7,34 +7,8 @@ deploymentConfigurations:
       enabled: false
       accounts: []
     aws:
-      enabled: true
-      accounts:
-      - name: "aws-cloud"
-        requiredGroupMembership: []
-        providerVersion: "v1"
-        permissions: {}
-        accountId: "732813442182"
-        assumeRole: "spinEC2Managed"
-        lifecycleHooks: []
-        regions:
-        - name: "us-west-1"
-      - name: "awscloud-1"
-        requiredGroupMembership: []
-        providerVersion: "v1"
-        permissions: {}
-        accountId: "732813442182"
-        assumeRole: "spinEC2Managed"
-        lifecycleHooks: []
-        regions:
-        - name: "us-west-1"
-      bakeryDefaults:
-        baseImages: []
-      defaultKeyPairTemplate: "{{name}}-keypair"
-      defaultRegions:
-      - name: "us-west-2"
-      - name: "us-west-1"
-      defaults:
-        iamRole: "BaseIAMRole"
+      enabled: false
+      accounts: []
     ecs:
       enabled: false
     azure:
@@ -290,7 +264,7 @@ deploymentConfigurations:
       enabled: false
       masters: []
     gcb:
-      enabled: true
+      enabled: false
       accounts: []
     codebuild:
       enabled: false
