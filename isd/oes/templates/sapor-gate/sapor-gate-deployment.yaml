@@ -10,7 +10,7 @@ metadata:
     component: sapor-gate
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.11"
+    chart: "oes-4.0.12"
   name: sapor-gate
 spec:
   replicas: 1
@@ -28,7 +28,7 @@ spec:
         component: sapor-gate
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.11"
+        chart: "oes-4.0.12"
     spec:
       containers:
       - image: quay.io/opsmxpublic/ubi8-oes-spin-gate:v3.12.0-saporgate

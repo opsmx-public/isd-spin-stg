@@ -10,7 +10,7 @@ metadata:
     component: datascience
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.11"
+    chart: "oes-4.0.12"
   name: oes-datascience
 spec:
   replicas: 1
@@ -31,7 +31,7 @@ spec:
         component: datascience
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.11"
+        chart: "oes-4.0.12"
     spec:
       initContainers:
       - name: db-check

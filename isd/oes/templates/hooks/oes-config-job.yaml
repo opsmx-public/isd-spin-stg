@@ -13,7 +13,7 @@ metadata:
     component: oes-config
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.11"
+    chart: "oes-4.0.12"
   name: oes-config
 spec:
   template:
@@ -26,7 +26,7 @@ spec:
         component: oes-config
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.11"
+        chart: "oes-4.0.12"
     spec:
       containers:
       - command: ["bash", "/tmp/config/datasource-api.sh" ]
