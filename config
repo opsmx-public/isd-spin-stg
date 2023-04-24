@@ -7,34 +7,8 @@ deploymentConfigurations:
       enabled: false
       accounts: []
     aws:
-      enabled: true
-      accounts:
-      - name: "aws-cloud"
-        requiredGroupMembership: []
-        providerVersion: "v1"
-        permissions: {}
-        accountId: "732813442182"
-        assumeRole: "spinEC2Managed"
-        lifecycleHooks: []
-        regions:
-        - name: "us-west-1"
-      - name: "awscloud-1"
-        requiredGroupMembership: []
-        providerVersion: "v1"
-        permissions: {}
-        accountId: "732813442182"
-        assumeRole: "spinEC2Managed"
-        lifecycleHooks: []
-        regions:
-        - name: "us-west-1"
-      bakeryDefaults:
-        baseImages: []
-      defaultKeyPairTemplate: "{{name}}-keypair"
-      defaultRegions:
-      - name: "us-west-2"
-      - name: "us-west-1"
-      defaults:
-        iamRole: "BaseIAMRole"
+      enabled: false
+      accounts: []
     ecs:
       enabled: false
     azure:
@@ -67,6 +41,19 @@ deploymentConfigurations:
         - "library/ubuntu"
         - "library/centos"
         - "library/nginx"
+      - name: "gcr-apr"
+        requiredGroupMembership: []
+        permissions: {}
+        address: "https://gcr.io"
+        email: "fake.email@spinnaker.io"
+        cacheIntervalSeconds: 30
+        clientTimeoutMillis: 60000
+        cacheThreads: 1
+        paginateSize: 100
+        sortTagsByDate: false
+        trackDigests: false
+        insecureRegistry: false
+        repositories: []
       primaryAccount: "dockerhub"
     google:
       enabled: false
@@ -261,6 +248,12 @@ deploymentConfigurations:
         username: "opsmxdev"
         password: "1137202a2b83de7e15669402fea7a30e14"
         csrf: true
+      - name: "jenkins-test"
+        permissions: {}
+        address: "https://jenkins.opsmx.net:8181/jenkins"
+        username: "opsmxdev"
+        password: "1137202a2b83de7e15669402fea7a30e14"
+        csrf: true
     travis:
       enabled: false
       masters: []
@@ -272,13 +265,22 @@ deploymentConfigurations:
       masters: []
     gcb:
       enabled: false
+      accounts: []
     codebuild:
       enabled: false
       accounts: []
   repository:
     artifactory:
-      enabled: false
-      searches: []
+      enabled: true
+      searches:
+      - name: "admin"
+        permissions: {}
+        baseUrl: "https://opsmx.jfrog.io"
+        repo: "opsmx-helm-local"
+        groupId: "1.0.1"
+        repoType: "helm"
+        username: "harsha"
+        password: "Harsha@123"
   security:
     apiSecurity:
       ssl:
