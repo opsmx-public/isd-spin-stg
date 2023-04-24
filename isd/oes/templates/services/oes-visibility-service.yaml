@@ -8,7 +8,7 @@ metadata:
     component: visibility
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.11"
+    chart: "oes-4.0.12"
   name: oes-visibility
 spec:
   type: ClusterIP

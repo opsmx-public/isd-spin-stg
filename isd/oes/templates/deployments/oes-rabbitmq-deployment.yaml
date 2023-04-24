@@ -10,7 +10,7 @@ metadata:
     component: rabbitmq
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.11"
+    chart: "oes-4.0.12"
   name: rabbitmq
 spec:
   replicas: 1
@@ -27,7 +27,7 @@ spec:
         component: rabbitmq
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.11"
+        chart: "oes-4.0.12"
     spec:
       containers:
       - image: quay.io/opsmxpublic/rabbitmq:3-management
