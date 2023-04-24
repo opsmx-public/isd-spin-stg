@@ -23,4 +23,7 @@ services:
     image: quay.io/opsmxpublic/ubi8-oes-orca:cb2cc40d7-18
   gate:
     image: quay.io/opsmxpublic/ubi8-oes-gate:80130c7d-11
+<<<<<<< HEAD
 
+=======
+>>>>>>> 755528b318ed4194ccdc9069de3194f69adb11a5
