@@ -19,8 +19,8 @@ data:
         #set -x
 
         gitusermailid=user@mail.com
-        gitusername=keerthibingi
-        gitpassword=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
+        gitusername=TejaswiniOpsmx
+        gitpassword=encrypted:gittoken:gittoken
         org=opsmx-public
         repo_name=isd-spin-stg
 

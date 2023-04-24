@@ -33,9 +33,9 @@ data:
 
     # Storage
     
-    echo spinnakeradmin | $HAL_COMMAND config storage s3 edit \
+    echo encrypted:miniopassword:miniopassword | $HAL_COMMAND config storage s3 edit \
         --endpoint http://isd-minio:9000 \
-        --access-key-id spinnakeradmin \
+        --access-key-id encrypted:miniopassword:miniopassword \
         --secret-access-key --bucket spinnaker \
         --path-style-access true
     $HAL_COMMAND config storage edit --type s3

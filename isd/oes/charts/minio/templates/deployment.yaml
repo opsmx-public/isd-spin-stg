@@ -26,7 +26,7 @@ spec:
         app: minio
         release: isd
       annotations:
-        checksum/secrets: fbbcac10fd5862622bf2f5dbb8e1ea7d5eebd55ab36cb67738d8edbccd60d249
+        checksum/secrets: 775ccb85b044d7eedf9e50381e266030ef5845ebfb865baf892e0783d7523d1b
         checksum/config: 7a7ac5513fcd53ca17fde80ebf50780809224b63001a3969ca32fcaf1caf5999
     spec:
       serviceAccountName: "isd-minio"
