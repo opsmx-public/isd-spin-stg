@@ -1,0 +1,108 @@
+# This file can be used for very simple installation that uses
+# secure urls (i.e. httpS).  This requires that cert-manager be present, the cluster be accessible from internet
+#
+global:
+#  nodeSelector: {}
+#  affinity:
+#    podAntiAffinity:
+#      requiredDuringSchedulingIgnoredDuringExecution:
+#      - labelSelector:
+#          matchExpressions:
+#          - key: isdenv
+#            operator: In
+#            values:
+#            - ISD-SPIN-STAGING
+#        topologyKey: "kubernetes.io/hostname"
+#  tolerations:
+#    - key: "isdenv"
+#      operator: "Equal"
+#      value: "ISD-SPIN-STAGING"
+#      effect: "NoSchedule"  
+  commonGate:
+    enabled: true
+    spinnakerRBAC: false
+  ssl:
+    enabled: true
+
+# If cert-manager is installed, TLS secrets will created automatically, as an 'Issuer' will be created
+  # Else, the TLS secrets will need to created manually
+  certManager:
+    installed: true
+
+  gitea:
+    enabled: false
+
+  githubcreationHook: true
+
+  createIngress: true
+  oesUI:
+    protocol: https
+    host: isd-spin.stg.opsmx.net
+
+  installOpenLdap: true # If using external LDAP/SAML/OAuth
+
+  ldap:
+    enabled: true # Using SAML so turn off ldap
+    url: ldap://{{ .Release.Name }}-openldap:389
+    managerDn: cn=admin,dc=example,dc=org
+    managerPassword: opsmxadmin123
+    groupSearchBase: ou=groups,dc=example,dc=org
+    groupSearchFilter: member={0}
+    groupRoleAttributes: cn
+    userDnPattern: cn={0},dc=example,dc=org
+
+spinnaker:
+  # Initialize gitOps style Halyard
+  gitopsHalyard:
+    repo:
+      organization: opsmx-public
+      username: keerthibingi
+      token: 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
+      repository: isd-spin-stg
+      dynamicAccRepository: isd-spin-stg
+      halConfigBranch: main
+    pipelinePromotion:
+      enabled: true
+      type: git  # git, s3, stash
+      organization: opsmx-public  # Also called "project" in some repos
+      repository: isd-spin-stg # bucket name in case of S3
+      rootFolder: /
+      baseUrl: github.com  #  "git_url"
+      username: keerthibingi # git user
+      token: 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
+      branch: main
+      targetBranch: main
+
+  spinCli:
+    auth:
+      basic:
+        username: admin  # This should match the saporgate credentials below
+        password: saporadmin        # This should match the saporgate credentials below
+
+auditClient:
+  image:
+    tag: v4.0.4.b3
+autopilot:
+  image:
+    tag: v4.0.4.b3
+gate:
+  image:
+    tag: v4.0.4.b2
+platform:
+  image:
+    tag: v4.0.4.b3
+dashboard:
+  image:
+    tag: v4.0.4.b3
+sapor:
+  image:
+    tag: v4.0.4.b3
+ui:
+  image:
+    tag: v4.0.4.b3
+datascience:
+  image:
+    tag: v4.0.4.b3
+visibility:
+  image:
+    tag: v4.0.4.b3
