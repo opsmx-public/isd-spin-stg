@@ -331,13 +331,8 @@ deploymentConfigurations:
       enabled: false
       accounts: []
     github:
-      enabled: true
-      accounts:
-      - name: "opsmxdemo_account"
-      - name: "gitops"
-        username: "TejaswiniOpsmx"
-        token: "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"
-        noValidate: false
+      enabled: false
+      accounts: []
     gitlab:
       enabled: false
       accounts: []
