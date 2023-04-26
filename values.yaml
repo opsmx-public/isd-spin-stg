@@ -21,7 +21,7 @@ global:
     
   commonGate:
     enabled: true
-    spinnakerRBAC: false   
+    spinnakerRBAC: true   
 
   certManager:
     installed: true # Set to true if you have cert-manager installed in the cluster, the URL must be accessible from the internet
