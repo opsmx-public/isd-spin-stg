@@ -3,7 +3,7 @@ fiat:
   admin:
     roles:
       - admin
-      #- 77xx939ops
+      - 77xx939ops
 auth:
   groupMembership:
     service: ldap
@@ -24,18 +24,18 @@ auth.permissions.source.pipeline.prefix:
    - prefix: "dev*"
      permissions:
        READ:
-       - "devteam-group"
-       - "qateam"
+       - "dev"
+       - "qa"
        WRITE:
-       - "devteam-group"
+       - "dev"
        EXECUTE:
-       - "devteam-group"
+       - "dev"
    - prefix: "qa*"
      permissions:
        READ:
-       - "qateam"
-       - "devteam-group"
+       - "qa"
+       - "dev"
        WRITE:
-       - "qateam"
+       - "qa"
        EXECUTE:
-       - "qateam"
+       - "qa"
