@@ -20,7 +20,6 @@ global:
     enabled: true # Set to true if using "httpS" urls. TLS certificates must be generated for the above URL
     
   commonGate:
-    enabled: true
     spinnakerRBAC: true   
 
   certManager:
