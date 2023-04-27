@@ -9,7 +9,7 @@ metadata:
     app: opa
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.12"
+    chart: "oes-4.0.13"
   name: opa
 spec:
   replicas: 1
@@ -24,12 +24,12 @@ spec:
         app: opa
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.12"
+        chart: "oes-4.0.13"
       name: opa
     spec:
       containers:
         - name: opa
-          image: opa:v0.47.0
+          image: quay.io/opsmxpublic/opa:v0.47.0
           args:
             - "run"
             - "--server"

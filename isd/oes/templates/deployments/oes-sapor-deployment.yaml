@@ -10,7 +10,7 @@ metadata:
     component: sapor
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.12"
+    chart: "oes-4.0.13"
   name: oes-sapor
 spec:
   replicas: 1
@@ -32,7 +32,7 @@ spec:
         component: sapor
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.12"
+        chart: "oes-4.0.13"
     spec:
       initContainers:
       - name: db-check

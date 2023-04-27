@@ -10,7 +10,7 @@ metadata:
     component: auditservice
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.12"
+    chart: "oes-4.0.13"
   name: oes-audit-service
 spec:
   replicas: 1
@@ -31,7 +31,7 @@ spec:
         component: auditservice
         heritage: "Helm"
         release: "isd"
-        chart: "oes-4.0.12"
+        chart: "oes-4.0.13"
     spec:
       initContainers:
       - name: db-check
@@ -46,7 +46,7 @@ spec:
             done;
             echo 'OESDB OK ✓'
       containers:
-      - image: quay.io/opsmxpublic/ubi8-oes-audit-service:v4.0.3
+      - image: quay.io/opsmxpublic/ubi8-oes-audit-service:v4.0.4.b4-rc1
         imagePullPolicy: IfNotPresent
         name: oes-audit
         env:

@@ -9,7 +9,7 @@ metadata:
     agent.opsmx.com/role: controller
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.12"
+    chart: "oes-4.0.13"
 spec:
   selector:
     app: opsmx-controller-controller1
@@ -35,7 +35,7 @@ metadata:
     agent.opsmx.com/role: controller
     heritage: "Helm"
     release: "isd"
-    chart: "oes-4.0.12"
+    chart: "oes-4.0.13"
 spec:
   selector:
     app: opsmx-controller-controller1
