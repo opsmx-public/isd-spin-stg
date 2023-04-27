@@ -9,7 +9,7 @@ data:
 
     git_url=github.com
     git_project=opsmx-public
-    git_user=keerthibingi
+    git_user=TejaswiniOpsmx
 kind: ConfigMap
 metadata:
   name: pipe-promot-config
