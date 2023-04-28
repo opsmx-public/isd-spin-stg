@@ -1,0 +1,52 @@
+{
+ "appConfig": {},
+ "application": "opsmx-gitops",
+ "description": "Pipeline sync jobs pile up over time. This pipeline cleans up the jobs. Recommened to run on a schedule during a silent window.",
+ "id": "fea34482-3951-4b51-baca-3d2371c74df5",
+ "index": 1,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "clean-up-pipeline-promotion-jobs",
+ "schema": "1",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "account": "default",
+   "app": "opsmx-gitops",
+   "cloudProvider": "kubernetes",
+   "kinds": [
+    "job"
+   ],
+   "labelSelectors": {
+    "selectors": [
+     {
+      "key": "stage",
+      "kind": "EQUALS",
+      "values": [
+       "opsmx-custom"
+      ]
+     },
+     {
+      "key": "stagetype",
+      "kind": "EQUALS",
+      "values": [
+       "pipelinepromotion"
+      ]
+     }
+    ]
+   },
+   "location": "opsmx-isd",
+   "mode": "label",
+   "name": "Delete (Manifest)",
+   "options": {
+    "cascading": true
+   },
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "deleteManifest"
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1682663303000"
+}

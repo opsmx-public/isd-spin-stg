@@ -1,0 +1,50 @@
+{
+ "application": "opsmx-gitops",
+ "description": "Restart halyard to apply the changes when using gitOps. This pipeline can be automatically triggered using github webhook as well.",
+ "id": "d622a4f1-379d-4b68-ac6c-1c42316ae1a7",
+ "index": 0,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "restart-halyard",
+ "schema": "1",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "account": "default",
+   "app": "opsmx-gitops",
+   "cloudProvider": "kubernetes",
+   "kinds": [
+    "pod"
+   ],
+   "labelSelectors": {
+    "selectors": [
+     {
+      "key": "component",
+      "kind": "EQUALS",
+      "values": [
+       "halyard"
+      ]
+     }
+    ]
+   },
+   "location": "stg",
+   "mode": "label",
+   "name": "Delete (Manifest)",
+   "options": {
+    "cascading": true
+   },
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "deleteManifest"
+  }
+ ],
+ "triggers": [
+  {
+   "enabled": true,
+   "source": "restartSpinnaker",
+   "type": "webhook"
+  }
+ ],
+ "updateTs": "1682674084000"
+}

@@ -1,0 +1,117 @@
+{
+ "appConfig": {},
+ "application": "opsmx-gitops",
+ "description": "This pipeline is used to deleted the users and groups from openldap.",
+ "id": "c2ee809b-0446-401a-a38c-3bb9d44c2d0b",
+ "index": 6,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "ldapuserdeletion",
+ "parameterConfig": [
+  {
+   "default": "",
+   "description": "The user need to pass the value for user so that the particular user will be deleted in ldap",
+   "hasOptions": false,
+   "label": "",
+   "name": "user",
+   "options": [
+    {
+     "value": ""
+    }
+   ],
+   "pinned": true,
+   "required": true
+  },
+  {
+   "default": "test",
+   "description": "The usergroup value need to be passed so that  that particular group will be deleted in openldap",
+   "hasOptions": false,
+   "label": "",
+   "name": "usergroup",
+   "options": [
+    {
+     "value": ""
+    }
+   ],
+   "pinned": false,
+   "required": true
+  }
+ ],
+ "schema": "1",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "account": "default",
+   "alias": "runJob",
+   "application": "ldap",
+   "cloudProvider": "kubernetes",
+   "credentials": "default",
+   "manifest": {
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+     "generateName": "ldap-deletuser",
+     "labels": {
+      "webhook": "test"
+     }
+    },
+    "spec": {
+     "backoffLimit": 2,
+     "template": {
+      "spec": {
+       "containers": [
+        {
+         "args": [
+          "LDAP_BASE=\"dc=example,dc=org\" \nLDAP_PASS=\"opsmxadmin123\" \nLDAP_HOST=\"ldap://isd-openldap:389\"\n\n\nexport deluser=$user\nexport delgroup=$usergroup\n\nldapdelete -H  $LDAP_HOST -w $LDAP_PASS  -D  \"cn=admin,$LDAP_BASE\"  \"cn=$delgroup,ou=groups,$LDAP_BASE\"\nldapdelete -H  $LDAP_HOST -w $LDAP_PASS  -D  \"cn=admin,$LDAP_BASE\"   \"cn=$deluser,$LDAP_BASE\"\nldapsearch -x -H  $LDAP_HOST -w $LDAP_PASS  -D  \"cn=admin,$LDAP_BASE\" -b $LDAP_BASE \"(cn=*)\""
+         ],
+         "command": [
+          "/bin/sh",
+          "+x",
+          "-c"
+         ],
+         "env": [
+          {
+           "name": "user",
+           "value": "${parameters.user}"
+          },
+          {
+           "name": "usergroup",
+           "value": "${parameters.usergroup}"
+          }
+         ],
+         "image": "docker.io/osixia/openldap:1.2.4",
+         "name": "ldapservice",
+         "volumeMounts": [
+          {
+           "mountPath": "/root/userbase.ldif",
+           "name": "ldapbase-config",
+           "subPath": "userbase.ldif"
+          }
+         ]
+        }
+       ],
+       "restartPolicy": "Never",
+       "volumes": [
+        {
+         "configMap": {
+          "defaultMode": 420,
+          "name": "ldapusers"
+         },
+         "name": "ldapbase-config"
+        }
+       ]
+      }
+     }
+    }
+   },
+   "name": "Run Job (Manifest)",
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "source": "text",
+   "type": "runJobManifest"
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1682663321000"
+}

@@ -1,0 +1,30 @@
+{
+ "appConfig": {},
+ "application": "opsmx-gitops",
+ "description": "sync to spinnaker:- Downloads the applications and pipelines from the repo i.e configured and save it to the spinnaker. if the input is empty it downloads all the applications and pipelines. Branch and save path can also be specified as an input option to override the existing configuration",
+ "id": "86b26c3d-6754-4fc1-81d2-91dbe2fe1978",
+ "index": 7,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "syncToSpinnaker",
+ "schema": "1",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "alias": "preconfiguredJob",
+   "name": "pipelineSyncToSpinnaker",
+   "parameters": {
+    "branch_ui": "",
+    "rootfolder_ui": "",
+    "spinnaker_applications": "opsmx-gitops",
+    "spinnaker_pipelines": ""
+   },
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "pipelineSyncToSpinnaker"
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1682663294000"
+}

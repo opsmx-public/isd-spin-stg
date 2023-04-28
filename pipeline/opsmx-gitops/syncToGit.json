@@ -1,0 +1,30 @@
+{
+ "appConfig": {},
+ "application": "opsmx-gitops",
+ "description": "sync to git:- Backup the applications and pipelines from spinnaker to the repo i.e configured. if the input is empty it backup all the applications and pipelines. Branch and save path can also be specified as an input option to override the existing configuration",
+ "id": "0694af3b-ec6d-465b-926b-8835ed3e328c",
+ "index": 4,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "syncToGit",
+ "schema": "1",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "alias": "preconfiguredJob",
+   "name": "pipelineSyncToGit",
+   "parameters": {
+    "branch_ui": "",
+    "rootfolder_ui": "",
+    "spinnaker_applications": "opsmx-gitops",
+    "spinnaker_pipelines": ""
+   },
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "type": "pipelineSyncToGit"
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1682663293000"
+}
