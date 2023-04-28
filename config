@@ -310,8 +310,10 @@ deploymentConfigurations:
       accounts:
       - name: "opsmx_repo"
     http:
-      enabled: false
-      accounts: []
+      enabled: true
+      accounts:
+      - name: "https"
+        noValidate: false
     helm:
       enabled: true
       accounts:
