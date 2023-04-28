@@ -309,6 +309,10 @@ deploymentConfigurations:
       enabled: true
       accounts:
       - name: "opsmx_repo"
+      - name: "gitrepo"
+        username: "Akhil-gi"
+        token: "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"
+        noValidate: false
     http:
       enabled: true
       accounts:
