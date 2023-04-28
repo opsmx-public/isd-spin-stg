@@ -1,0 +1,66 @@
+{
+ "application": "sample25",
+ "id": "0eca3f8e-08fc-4cbf-bafa-e490f824d6cd",
+ "index": 0,
+ "keepWaitingPipelines": false,
+ "lastModifiedBy": "admin",
+ "limitConcurrent": true,
+ "name": "verification",
+ "schema": "1",
+ "spelEvaluator": "v4",
+ "stages": [
+  {
+   "applicationId": "24",
+   "name": "Verification",
+   "parameters": {
+    "baselineRealTime": false,
+    "baselinestarttime": 1612551864500,
+    "canaryRealTime": false,
+    "canaryresultscore": "90",
+    "canarystarttime": 1612554760315,
+    "customEnvironment": "",
+    "environment": [
+     {
+      "id": 3,
+      "spinnakerEnvironment": "qa"
+     }
+    ],
+    "gateSecurity": [
+     {
+      "connectorType": "PayloadConstraints",
+      "helpText": "Payload Constraints for Gate Security",
+      "isMultiSupported": true,
+      "label": "Payload Constraints",
+      "selectInput": false,
+      "supportedParams": [
+       {
+        "helpText": "Key",
+        "label": "Key",
+        "name": "label",
+        "type": "string"
+       },
+       {
+        "helpText": "Value",
+        "label": "Value",
+        "name": "value",
+        "type": "string"
+       }
+      ],
+      "values": []
+     }
+    ],
+    "lifetime": "5",
+    "logTemplate": "logne191",
+    "metricTemplate": "metric129un",
+    "minicanaryresult": "70"
+   },
+   "pipelineId": 91,
+   "refId": "1",
+   "requisiteStageRefIds": [],
+   "serviceId": 91,
+   "type": "verification"
+  }
+ ],
+ "triggers": [],
+ "updateTs": "1682419253000"
+}
