@@ -313,12 +313,10 @@ deploymentConfigurations:
       - name: "gitrepo"
         username: "Akhil-gi"
         token: "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"
-        noValidate: false
     http:
       enabled: true
       accounts:
       - name: "https"
-        noValidate: false
     helm:
       enabled: true
       accounts:
@@ -326,7 +324,6 @@ deploymentConfigurations:
         repository: "https://helmcharts.opsmx.com"
       - name: "helm"
         repository: "https://helmcharts.opsmx.com/"
-        noValidate: false
     s3:
       enabled: false
       accounts: []
