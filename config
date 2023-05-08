@@ -376,6 +376,11 @@ deploymentConfigurations:
         repository: "https://helmcharts.opsmx.com"
       - name: "helm"
         repository: "https://helmcharts.opsmx.com/"
+      - name: "helm8"
+        username: "harsha"
+        password: "Harsha@123"
+        repository: "https://helmcharts.opsmx.com/"
+        noValidate: false
     s3:
       enabled: false
       accounts: []
