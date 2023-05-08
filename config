@@ -58,6 +58,20 @@ deploymentConfigurations:
         - " library/centos"
         - " library/nginx"
         noValidate: false
+      - name: "ecr8"
+        requiredGroupMembership: []
+        permissions: {}
+        address: "https://us-west-2.console.aws.amazon.com/"
+        email: "fake.email@spinnaker.io"
+        cacheIntervalSeconds: 30
+        clientTimeoutMillis: 60000
+        cacheThreads: 1
+        paginateSize: 100
+        sortTagsByDate: false
+        trackDigests: false
+        insecureRegistry: false
+        repositories: []
+        noValidate: false
     google:
       enabled: false
       accounts: []
