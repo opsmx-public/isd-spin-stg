@@ -275,6 +275,15 @@ deploymentConfigurations:
         username: "harsha"
         password: "AKCp8jQnGB5hmDRUS1cpe24RvjZQCTZFo8arbNBhkddRV1F7z2NpHH9B6ViLoJ5J62RsXVkVF"
         noValidate: false
+      - name: "artifactory8"
+        permissions: {}
+        baseUrl: "https://opsmx.jfrog.io/"
+        repo: "opsmx-helm-local"
+        groupId: "1.0.1"
+        repoType: "helm"
+        username: "harsha"
+        password: "AKCp8jQnGB5hmDRUS1cpe24RvjZQCTZFo8arbNBhkddRV1F7z2NpHH9B6ViLoJ5J62RsXVkVF"
+        noValidate: false
   security:
     apiSecurity:
       ssl:
