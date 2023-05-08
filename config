@@ -369,6 +369,10 @@ deploymentConfigurations:
       enabled: true
       accounts:
       - name: "https"
+      - name: "http"
+        username: "jenkinsun"
+        password: "jenkinspw"
+        noValidate: false
     helm:
       enabled: true
       accounts:
