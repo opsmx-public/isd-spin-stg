@@ -40,6 +40,24 @@ deploymentConfigurations:
         insecureRegistry: false
         repositories: []
         noValidate: false
+      - name: "docker8"
+        requiredGroupMembership: []
+        permissions: {}
+        address: "https://index.docker.io/"
+        email: "fake.email@spinnaker.io"
+        cacheIntervalSeconds: 30
+        clientTimeoutMillis: 60000
+        cacheThreads: 1
+        paginateSize: 100
+        sortTagsByDate: false
+        trackDigests: false
+        insecureRegistry: false
+        repositories:
+        - "library/alpine"
+        - " library/ubuntu"
+        - " library/centos"
+        - " library/nginx"
+        noValidate: false
     google:
       enabled: false
       accounts: []
