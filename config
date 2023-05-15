@@ -372,6 +372,8 @@ deploymentConfigurations:
       enabled: true
       accounts:
       - name: "gitlab"
+      - name: "testgitlab"
+        noValidate: false
     gitrepo:
       enabled: true
       accounts:
