@@ -24,7 +24,7 @@ deploymentConfigurations:
     dockerRegistry:
       enabled: false
       accounts: []
-   google:
+    google:
       enabled: false
       accounts: []
       bakeryDefaults:
