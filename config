@@ -39,7 +39,6 @@ deploymentConfigurations:
         trackDigests: false
         insecureRegistry: false
         repositories: []
-        noValidate: false
       - name: "docker8"
         requiredGroupMembership: []
         permissions: {}
@@ -57,7 +56,6 @@ deploymentConfigurations:
         - " library/ubuntu"
         - " library/centos"
         - " library/nginx"
-        noValidate: false
       - name: "ecr8"
         requiredGroupMembership: []
         permissions: {}
@@ -71,7 +69,6 @@ deploymentConfigurations:
         trackDigests: false
         insecureRegistry: false
         repositories: []
-        noValidate: false
     google:
       enabled: false
       accounts: []
@@ -306,7 +303,6 @@ deploymentConfigurations:
         repoType: "helm"
         username: "harsha"
         password: "AKCp8jQnGB5hmDRUS1cpe24RvjZQCTZFo8arbNBhkddRV1F7z2NpHH9B6ViLoJ5J62RsXVkVF"
-        noValidate: false
       - name: "artifactory8"
         permissions: {}
         baseUrl: "https://opsmx.jfrog.io/"
@@ -315,7 +311,6 @@ deploymentConfigurations:
         repoType: "helm"
         username: "harsha"
         password: "AKCp8jQnGB5hmDRUS1cpe24RvjZQCTZFo8arbNBhkddRV1F7z2NpHH9B6ViLoJ5J62RsXVkVF"
-        noValidate: false
   security:
     apiSecurity:
       ssl:
@@ -373,7 +368,6 @@ deploymentConfigurations:
       accounts:
       - name: "gitlab"
       - name: "testgitlab"
-        noValidate: false
     gitrepo:
       enabled: true
       accounts:
@@ -388,7 +382,6 @@ deploymentConfigurations:
       - name: "http"
         username: "jenkinsun"
         password: "jenkinspw"
-        noValidate: false
     helm:
       enabled: true
       accounts:
@@ -400,7 +393,6 @@ deploymentConfigurations:
         username: "harsha"
         password: "Harsha@123"
         repository: "https://helmcharts.opsmx.com/"
-        noValidate: false
     s3:
       enabled: false
       accounts: []
